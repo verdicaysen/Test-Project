@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+
+#This is for movement.
 func _Movement(delta):
 	var flySpeed = 500
 	if Input.is_action_pressed("up"):
