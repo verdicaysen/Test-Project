@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dwdl4i45meif2" path="res://Art Assets/ufoGreen.png" id="2_e5n14"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oug55"]
+radius = 7.95
 
 [node name="RigidBody2D" type="RigidBody2D"]
 scale = Vector2(0.998442, 1.00448)
@@ -13,7 +14,16 @@ script = ExtResource("1_8rroh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 0.995539)
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("2_e5n14")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(8, 8)
 shape = SubResource("CircleShape2D_oug55")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1, 0.98051)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
